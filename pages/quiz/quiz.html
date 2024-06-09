@@ -1,179 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Rubik", sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
-
-:root {
-    --bg-color: #f4f6fa;
-    --purple: #a729f5;
-    --primary-text-color: #313e51;
-    --secondery-text-color: #626c7f;
-    --shadow: 0px 16px 40px 0px rgba(143, 168, 193, 0.14);
-    --bg-html: #fff1e9;
-    --bg-css: #e8fdef;
-    --bg-js: #ebf0ff;
-    --bg-acessibilidade: #f6e7ff;
-    --button-bg: #fff;
-    --white: #fff;
-    --bg-mobile: url(../../assets/images/pattern-background-mobile-light.svg);
-    --bg-desktop: url(../../assets/images/pattern-background-desktop-light.svg)
-}
-
-body.escuro {
-    --bg-color: #313e51;
-    --bg-mobile: url(../../assets/images/pattern-background-mobile-dark.svg);
-    --bg-desktop: url(../../assets/images/pattern-background-desktop-dark.svg);
-    --primary-text-color: #fff;
-    --secondery-text-color: #abc1e1;
-    --button-bg: #3b4b66;
-    --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
-}
-
-body {
-    height: 100svh;
-    background: var(--bg-mobile) var(--bg-color);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    padding: 16px 24px;
-}
-
-.assunto {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.assunto_icone {
-    background: var(--bg-acessibilidade);
-    width: 40px;
-    height: 40px;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.assunto_icone img {
-    width: 100%;
-}
-
-.assunto h1 {
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--primary-text-color);
-}
-
-.tema {
-    padding: 8px 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.tema img {
-    width: 16px;
-}
-
-.tema button {
-    height: 20px;
-    width: 32px;
-    background: var(--purple);
-    border: 0;
-    border-radius: 999px;
-    padding: 4px;
-}
-
-.tema button div {
-    background: var(--white);
-    width: 12px;
-    height: 12px;
-    border-radius: 999px;
-}
-
-main {
-    padding: 32px 24px;
-}
-
-.pergunta {
-    margin-bottom: 40px;
-}
-
-.pergunta p {
-    font-style: italic;
-    font-size: 14px;
-    color: var(--secondery-text-color);
-    margin-bottom: 12px;
-}
-
-.pergunta h2 {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--primary-text-color);
-    line-height: 24px;
-    margin-bottom: 24px;
-}
-
-.barra_progresso {
-    background: var(--button-bg);
-    height: 16px;
-    padding: 4px;
-    border-radius: 999px;
-}
-
-.barra_progresso div {
-    height: 100%;
-    width: 60%;
-    background: var(--purple);
-    border-radius: 999px;
-}
-
-.alternativas form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-}
-
-.alternativas label {
-    display: block;
-    padding: 12px;
-    background: var(--button-bg);
-    font-size: 18px;
-}
-
-.alternativas input {
-    display: none;
-}
-
-@media (min-width: 1100px) {
-    .tema img {
-        width: 24px;
-    }
-
-    .tema {
-        gap: 16px;
-    }
-
-    .tema button {
-        width: 48px;
-        height: 28px;
-    }
-
-    .tema button div {
-        width: 20px;
-        height: 20px;
-    }
-}
- 8 changes: 7 additions & 1 deletion8  
-pages/quiz/quiz.html
-Original file line number	Diff line number	Diff line change
-@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -206,11 +30,8 @@ Original file line number	Diff line number	Diff line change
         <section class="pergunta">
             <p>Questão 6 de 10</p>
             <h2>Qual o significado de HTML?</h2>
-
             <div class="barra_progresso">
-
                 <div>
-
                 </div>
             </div>
         </section>
@@ -218,28 +39,33 @@ Original file line number	Diff line number	Diff line change
         <section class="alternativas">
             <form action="">
                 <label for="alternativa_a">
-                    <input type="radio" id="alternativa_a">
+                <label for="alternativa_a" id="correta">
+                    <input type="radio" id="alternativa_a" name="alternativa">
+
                     <div>
                         <span>A</span>
                         Hyper Trainer Marking Language
                     </div>
                 </label>
+
                 <label for="alternativa_b">
-                    <input type="radio" id="alternativa_b">
+                <label for="alternativa_b" id="errada">
+                    <input type="radio" id="alternativa_b" name="alternativa">
+
                     <div>
                         <span>B</span>
                         Hyper Text Marketing Language
                     </div>
                 </label>
                 <label for="alternativa_c">
-                    <input type="radio" id="alternativa_c">
+                    <input type="radio" id="alternativa_c" name="alternativa">
                     <div>
                         <span>C</span>
                         Hyper Text Markup Language
                     </div>
                 </label>
                 <label for="alternativa_d">
-                    <input type="radio" id="alternativa_d">
+                    <input type="radio" id="alternativa_d" name="alternativa">
                     <div>
                         <span>D</span>
                         Hyper Text Markup Leveler
