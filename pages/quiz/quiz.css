@@ -9,13 +9,13 @@
     --bg-color: #f4f6fa;
     --purple: #a729f5;
     --primary-text-color: #313e51;
-    --secondery-text-color: #626c7f;
+    --secondary-text-color: #626c7f;
+    --button-bg: #fff;
     --shadow: 0px 16px 40px 0px rgba(143, 168, 193, 0.14);
     --bg-html: #fff1e9;
-    --bg-css: #e8fdef;
-    --bg-js: #ebf0ff;
+    --bg-css: #e0fdef;
+    --bg-javascript: #ebf0ff;
     --bg-acessibilidade: #f6e7ff;
-    --button-bg: #fff;
     --white: #fff;
     --green: #26d782;
     --red: #ee5454;
@@ -27,8 +27,8 @@ body.escuro {
     --bg-mobile: url(../../assets/images/pattern-background-mobile-dark.svg);
     --bg-desktop: url(../../assets/images/pattern-background-desktop-dark.svg);
     --primary-text-color: #fff;
-    --secondery-text-color: #abc1e1;
-    --button-bg: #3b4b66;
+    --secondary-text-color: #abc1e1;
+    --button-bg: #3b4d66;
     --shadow: 0px 16px 40px 0px rgba(49, 62, 81, 0.14);
 }
 body {
@@ -36,7 +36,7 @@ body {
     background: var(--bg-mobile) var(--bg-color);
     background-repeat: no-repeat;
     background-size: cover;
-}
+}  
 header {
     display: flex;
     justify-content: space-between;
@@ -51,11 +51,8 @@ header {
     background: var(--bg-acessibilidade);
     width: 40px;
     height: 40px;
-    padding: 5px;
+    padding:5px;
     border-radius: 5px;
-}
-.assunto_icone img {
-    width: 100%;
 }
 .assunto h1 {
     font-size: 18px;
@@ -80,7 +77,7 @@ header {
     padding: 4px;
 }
 .tema button div {
-    background: var(--white);
+    background:var(--white) ;
     width: 12px;
     height: 12px;
     border-radius: 999px;
@@ -94,7 +91,7 @@ main {
 .pergunta p {
     font-style: italic;
     font-size: 14px;
-    color: var(--secondery-text-color);
+    color: var(--secondary-text-color);
     margin-bottom: 12px;
 }
 .pergunta h2 {
@@ -124,8 +121,8 @@ main {
 }
 .alternativas label {
     display: block;
-    padding: 12px;
     background: var(--button-bg);
+    padding: 12px;
     font-size: 18px;
     font-weight: 500;
     border-radius: 12px;
@@ -139,25 +136,148 @@ main {
         color: var(--white);
     }
 }
-
 .alternativas label#correta {
     outline: 3px solid var(--green);
-
     & span {
         background: var(--green);
-        color: white;
+        color: var(--white);
     }
 }
-
 .alternativas label#errada {
     outline: 3px solid var(--red);
-
     & span {
         background: var(--red);
         color: var(--white);
     }
 }
-
 .alternativas input {
     display: none;
+}
+.alternativas div {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.alternativas div span {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-color);
+    border-radius: 5px;
+    color: var(--secondary-text-color);
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.alternativas button {
+    padding: 16px;
+    border-radius: 12px;
+    border: none;
+    background: var(--purple);
+    color: var(--white);
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+@media(min-width: 1100px) {
+    header {
+        margin-block: 81px;
+        max-width: 1160px;
+        margin-inline: auto;
+    }
+
+    .assunto_icone {
+        width: 56px;
+        height: 56px;
+        padding: 8px;
+    }
+
+    .assunto h1 {
+        font-size: 28px;
+    }
+
+    .tema {
+        padding: 8px 0;
+        padding: 9px 0;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .tema img {
+        width: 16px;
+        width: 20px;
+    }
+
+    .tema button {
+        height: 20px;
+        width: 32px;
+        background: var(--purple);
+        border: 0;
+        border-radius: 999px;
+        border-radius: 1000px;
+        padding: 4px;
+    }
+
+    .tema button div {
+        background:var(--white) ;
+        width: 12px;
+        height: 12px;
+        width: 14px;
+        height: 14px;
+        border-radius: 999px;
+    }
+    main {
+        max-width: 1160px;
+        margin-inline: auto;
+
+        display: flex;
+        gap: 130px;
+    }
+    section {
+        width: 100%;
+    }
+
+    .pergunta {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .pergunta p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 37px;
+    }
+
+    .pergunta h2 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    .alternativas form {
+        gap: 24px;
+        margin-bottom: 24px;
+    }
+
+    .alternativas label {
+        font-size: 22px;
+        padding: 18px 20px;
+    }
+
+    .alternativas div {
+        gap: 32px;
+    }
+
+    .alternativas div span {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+    }
+    .alternativas button {
+        font-size: 22px;
+    }
 }
