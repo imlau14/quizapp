@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -75,13 +74,11 @@ main {
     line-height: 150%;
     font-style: italic;
 }
-
 .assuntos {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
 .assuntos button {
     border: none;
     background: var(--button-bg);
@@ -91,20 +88,31 @@ main {
     padding: 12px;
     border-radius: 12px;
     box-shadow: var(--shadow);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--primary-text-color);
+}
+
+.assuntos button div {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.assuntos button img {
+    width: 100%;
 }
 
 .botao_html div {
     background: var(--bg-html);
 }
-
 .botao_css div {
     background: var(--bg-css);
 }
-
 .botao_js div {
     background: var(--bg-js);
 }
-
 .botao_acessibilidade div {
     background: var(--bg-acessibilidade);
 }
